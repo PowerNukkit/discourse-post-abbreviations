@@ -6,7 +6,11 @@ registerOption((siteSettings, opts) => {
 
 function abbrWellKnown (text) {
 	return text
-		.replace(/\b((\s)charka|chakraos|charkaos|chakralinux|charkalinux(?=\s))\b/g, "chakra")
+		.replace(/\b((\s)charka(?=\s))\b/g, " chakra ")
+        .replace(/\b((\s)chakraos(?=\s))\b/g, " chakra ")
+        .replace(/\b((\s)charkaos(?=\s))\b/g, " chakra ")
+        .replace(/\b((\s)chakralinux(?=\s))\b/g, " chakra ")
+        .replace(/\b((\s)charkalinux(?=\s))\b/g, " chakra ")
 		// .replace(/\b((\s)chakra|charka|chakraos|charkaos|chakralinux|charkalinux|chakra\sos|chakra\slinux|charka\sos|charka\slinux(?=\s))\b/ig, "<abbr class=\"dpa-abbr\" title=\"Chakra Linux operating system\">Chakra</abbr>")
 		// .replace(/\b(git)\b/ig, "<abbr class=\"dpa-abbr\" title=\"A distributed version control system\">git</abbr>")
 		// .replace(/\b(calamares)\b(?!\S)/ig, "<abbr class=\"dpa-abbr\" title=\"An installer framework, used in Chakra\">Calamares</abbr>")
