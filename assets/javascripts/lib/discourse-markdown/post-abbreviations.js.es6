@@ -93,7 +93,7 @@ function abbrWellKnown (text) {
 		.replace(/\b(grub)\b/ig, "<abbr class=\"dpa-abbr\" title=\"GNU GRand Unified Bootloader\">GRUB</abbr>")
 		.replace(/\b(gpt)\b/ig, "<abbr class=\"dpa-abbr\" title=\"GUID Partition Table\">GPT</abbr>")
 		.replace(/\b(gpu)\b/ig, "<abbr class=\"dpa-abbr\" title=\"graphics processing unit\">GPU</abbr>")
-		.replace(/\b(gtk)\b/ig, "<abbr class=\"dpa-abbr\" title=\"A cross-platform widget toolkit for creating graphical user interfaces\">GTK+</abbr>")
+		// .replace(/\b(gtk)\b/ig, "<abbr class=\"dpa-abbr\" title=\"A cross-platform widget toolkit for creating graphical user interfaces\">GTK+</abbr>")
 		.replace(/\b(gtfo)\b/ig, "<abbr class=\"dpa-abbr\" title=\"get the fuck out\">GTFO</abbr>")
 		.replace(/\b(gui)\b/ig, "<abbr class=\"dpa-abbr\" title=\"Graphical User Interface\">GUI</abbr>")
 		.replace(/\b(guid)\b/ig, "<abbr class=\"dpa-abbr\" title=\"Globally Unique IDentifiers\">GUID</abbr>")
