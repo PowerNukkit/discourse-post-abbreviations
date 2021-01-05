@@ -1,5 +1,5 @@
 export function buildReplacementString(it : Simple) : string {
-	if(typeof(it) == typeof(Complex)){
+	if(it instanceof Complex){
 		var x = it as Complex;
 		return "<abbr class=\"" +
 		x.ClassName +
