@@ -25,7 +25,7 @@ export function replaceAllAbbreviations(text : String, data : Simple[]){
 		return text.replace(data[0].Regex, buildReplacementString(data[0]));
 	}
 	
-	var newText = text.replace(data[data.length-1].Regex, buildReplacementString(data[0]));
+	var newText = text.replace(data[data.length-1].Regex, buildReplacementString(data[data.length-1]));
 	data.pop();
 	return replaceAllAbbreviations(newText, data);
 }
