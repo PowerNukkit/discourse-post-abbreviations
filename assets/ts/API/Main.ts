@@ -1,4 +1,4 @@
-export function buildReplacementString(it : Simple){
+export function buildReplacementString(it : Simple) : String {
 	if(typeof(it) == typeof(Complex)){
 		var x = it as Complex;
 		return "<abbr class=\"" +
@@ -16,7 +16,7 @@ export function buildReplacementString(it : Simple){
 	+ "</abbr>"
 }
 
-export function replaceAllAbbreviations(text : String, data : Simple[]){
+export function replaceAllAbbreviations(text : String, data : Simple[]) : String {
 	if(data === undefined || data.length == 0){
 		return text;
 	}
