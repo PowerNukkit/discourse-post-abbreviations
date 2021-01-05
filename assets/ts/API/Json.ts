@@ -1,16 +1,17 @@
 export function parseStore(data : string) : Array<Simple> {
 	var list : Array<Simple>
-	var objs : Array<Object> = JSON.parse(data, readReviver);
-	for (var obj in objs){
-		if(obj["type"] == "Complex"){
-			list.push(obj["value"] as Complex);
-		} else if (obj["type"] == "Simple"){
-			list.push(obj["value"] as Simple);
+	list = new Array<Simple>();
+	var objs : Array<any> = JSON.parse(data, readReviver);
+	for (var i = 0; i < objs.length; i++) {
+		var x = objs[i]
+		if(x["type"] == "Complex"){
+			list.push(x["value"] as Complex);
+		} else if (x["type"] == "Simple"){
+			list.push(x["value"] as Simple);
 		}
 	}
 	return list;
 }
-
 export function stringifyStore(data : Simple[]) : string {
 	var list : Array<IOObject<Simple>>
 	for (var i = 0; i < data.length; i++) {
